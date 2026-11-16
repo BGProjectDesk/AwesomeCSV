@@ -1,0 +1,85 @@
+{
+  "cycle_id": "cloud-only-commercial-20261116T2105",
+  "trigger_at_utc": "2026-11-16T21:05:57.331Z",
+  "last_updated_at_utc": "2026-11-16T21:18:26Z",
+  "status": "BOUNDED_COMMERCIAL_ACTION_COMPLETE_PROJECT_ACTIVE_UNACHIEVED",
+  "hypothesis": "Cloud-model source review can distinguish genuine source restrictions from an internal fee/account overgate, then carry a complete small unit into a normal invited fee/scope decision.",
+  "action": "Astra reviewed the retained Mautic18050documentationunit; root read the actual658line PRrequirements and posted one44word nonbinding availability/fee/checks question through nativeGitHubIssuecomment API.",
+  "primary_evidence": [
+    "https://github.com/mautic/mautic/issues/18050",
+    "https://github.com/mautic/mautic/issues/18050#issuecomment-6929651771",
+    "https://contribute.mautic.org/en/latest/contributing/developer.html"
+  ],
+  "results": {
+    "new_distinct_small_requests_examined": 0,
+    "new_scope_qualification_questions_sent_verified": 1,
+    "new_priced_offers": 0,
+    "new_substantive_buyer_conversations": 0,
+    "paid_orders": 0,
+    "deliveries": 0,
+    "proceeds": 0
+  },
+  "proof": "mautic18050-send-20261116.json",
+  "current_input": {
+    "privateSite": {
+      "overview_and_exact_two_tables": true,
+      "owner_tests": 2,
+      "genuine_enquiries": 0,
+      "genuine_withdrawals": 0,
+      "all_pages_complete": true,
+      "omitted_or_truncated_values": 0,
+      "raw_contact_or_row_data_emitted": false
+    },
+    "awesomeCSV188": {
+      "state": "open",
+      "comments": 0,
+      "checked_this_cycle": true
+    },
+    "Proton": {
+      "not_repolled": true,
+      "last_actual_complete_check": "16Nov20:12All50/Spam0;3olderAllpagesunread",
+      "current_cloud_only_browser_access_not_claimed": true
+    },
+    "Fiverr": "Existingmanualverificationboundary;notfreshorderscheck."
+  },
+  "observation": "Actual cloud-native comments work on this source. Earlier issue/PRcreation403 elsewhere was not a GitHub-wide prohibition. Availability, funding, exact checks, PRrights and full delivery capability remain unconfirmed before any contract/work.",
+  "revision": "Do not turn unverified fee/payment readiness or current assignee into an automatic ban on a relevant nonbinding question. Preserve real source restrictions and do not promise untested full-stack validation or merge control.",
+  "next_paid_test": "Handle genuine reply on Mautic18050before any work/claim/account/payment setup. Continue only independently source-cleared complete small paid outputs with a usable cloud-native invited route; no recent-send chaser or replay of exhausted sources.",
+  "current_money_by_currency": {
+    "GBP": 0,
+    "USD": 0,
+    "INR": 0,
+    "CAD": 0
+  },
+  "candidate_avenues": 16,
+  "live_owned_offers": 2,
+  "earning_streams": 0,
+  "target": {
+    "distinct_examined": 30,
+    "target": 1000,
+    "shortfall": 970,
+    "not_incremented_for_reconsideration_or_synthetic_model_checks": true
+  },
+  "inherited_counts_and_one_send_delta": {
+    "initial_attempts": 116,
+    "verified_initial_transmissions": 113,
+    "verified_initials_without_known_final_failure": 104,
+    "verified_noninitial_sends": 32,
+    "queue_records_total": 116,
+    "followup_records_total": 116,
+    "journal_events_total": 396,
+    "local_baseline_journal_events": 394,
+    "cloud_events": 2,
+    "suppressed_final_failed_addresses": 9,
+    "pending_send_unknown": 0
+  },
+  "controls": {
+    "cloud_only": true,
+    "local_scripts_or_workers": 0,
+    "browser_UI_or_Chrome": 0,
+    "new_accounts_terms_credentials_or_spend": 0,
+    "root_only_sends": true,
+    "pending_outgoing_send": null
+  },
+  "historical_precision": "Current cloud addendum, not a complete migration of the frozen local115-contact/source history. Earlier completed reports/cutoffs unchanged, including16Nov19:13report26examined. Original2Novfunding milestone missed; USD100recovery0 and separateearnedreserve0."
+}
