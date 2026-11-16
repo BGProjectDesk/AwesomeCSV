@@ -1,0 +1,67 @@
+name: Cloud model adapter test
+on:
+  push:
+    branches: [cloud-model-trial-20261116]
+    paths:
+      - 'cloud-worker-trial/**'
+      - '.github/workflows/cloud-model-trial.yml'
+  workflow_dispatch:
+    inputs:
+      scope:
+        description: 'STOP runs only adapter tests; discovery makes one catalogue GET and no generations'
+        type: choice
+        options: [STOP, DISCOVER_ONLY]
+        default: STOP
+        required: true
+      owner_free_confirmation:
+        description: 'FREE confirms Groq Free, no payment method/paid billing, and owner-reviewed terms'
+        type: choice
+        options: [STOP, FREE]
+        default: STOP
+        required: true
+permissions:
+  contents: read
+concurrency:
+  group: cloud-model-adapter-trial
+  cancel-in-progress: false
+jobs:
+  adapter-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Fetch this exact public project commit
+        env:
+          SOURCE_SHA: ${{ github.sha }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          [[ "$SOURCE_SHA" =~ ^[0-9a-f]{40}$ ]]
+          git init --quiet project
+          git -C project fetch --quiet --depth=1 https://github.com/BGProjectDesk/AwesomeCSV.git "$SOURCE_SHA"
+          git -C project checkout --quiet --detach FETCH_HEAD
+      - name: Cloud-only deterministic adapter tests (no provider secret or network)
+        working-directory: project
+        run: python3 cloud-worker-trial/discover.py self-test
+  availability-only:
+    if: github.event_name == 'workflow_dispatch' && inputs.scope == 'DISCOVER_ONLY' && inputs.owner_free_confirmation == 'FREE' && github.run_attempt == 1
+    needs: adapter-tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Fetch this exact public project commit
+        env:
+          SOURCE_SHA: ${{ github.sha }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          [[ "$SOURCE_SHA" =~ ^[0-9a-f]{40}$ ]]
+          git init --quiet project
+          git -C project fetch --quiet --depth=1 https://github.com/BGProjectDesk/AwesomeCSV.git "$SOURCE_SHA"
+          git -C project checkout --quiet --detach FETCH_HEAD
+      - name: One approved catalogue GET; zero completion POSTs
+        working-directory: project
+        env:
+          OWNER_FREE_CONFIRMATION: ${{ inputs.owner_free_confirmation }}
+          APPROVAL_SCOPE: ${{ inputs.scope }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        run: python3 cloud-worker-trial/discover.py discover
