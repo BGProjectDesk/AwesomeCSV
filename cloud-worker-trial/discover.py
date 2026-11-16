@@ -29,6 +29,8 @@ def approval_guard(env):
     cloud_guard(env)
     if not (
         env.get("GITHUB_EVENT_NAME") == "workflow_dispatch"
+        and env.get("GITHUB_REPOSITORY") == "BGProjectDesk/AwesomeCSV"
+        and env.get("GITHUB_REF") == "refs/heads/cloud-model-trial-20261116"
         and env.get("OWNER_FREE_CONFIRMATION") == "FREE"
         and env.get("APPROVAL_SCOPE") == "DISCOVER_ONLY"
     ):
@@ -126,6 +128,8 @@ class AdapterTests(unittest.TestCase):
             "RUNNER_OS": "Linux",
             "GITHUB_RUN_ATTEMPT": "1",
             "GITHUB_EVENT_NAME": "workflow_dispatch",
+            "GITHUB_REPOSITORY": "BGProjectDesk/AwesomeCSV",
+            "GITHUB_REF": "refs/heads/cloud-model-trial-20261116",
             "OWNER_FREE_CONFIRMATION": "FREE",
             "APPROVAL_SCOPE": "DISCOVER_ONLY",
         }
@@ -144,7 +148,7 @@ class AdapterTests(unittest.TestCase):
                 if key == "GROQ_API_KEY":
                     raise AssertionError("Secret accessed before approval")
                 return super().get(key, default)
-        for field in ("OWNER_FREE_CONFIRMATION", "APPROVAL_SCOPE", "GITHUB_EVENT_NAME"):
+        for field in ("OWNER_FREE_CONFIRMATION", "APPROVAL_SCOPE", "GITHUB_EVENT_NAME", "GITHUB_REPOSITORY", "GITHUB_REF"):
             env = Guarded(self.cloud_env())
             env[field] = "STOP"
             with mock.patch(__name__ + ".read_catalogue", side_effect=AssertionError("Network called")):
