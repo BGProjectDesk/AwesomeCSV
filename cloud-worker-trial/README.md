@@ -1,32 +1,34 @@
-# Cloud model connection trial (draft)
+# Cloud worker resources
 
-This isolated branch prepares a small software-adapter test on **standard GitHub-hosted Linux runners**. It does not use a self-hosted runner or the account owner's PC.
+## Active native cloud-model pool
 
-## Current state
-No external model is connected or verified by this branch yet. No model generations are authorised by the first-stage workflow. The existing catalogue submission lives on a separate branch.
+Five new worker instances have responded using these configured model variants:
+- GPT-6.1 Sol
+- GPT-6.1 Terra
+- GPT-6 Astra
+- GPT-6 Sol
+- GPT-6 Luna
 
-## First-stage contract
-- Synthetic adapter self-tests run only on matching pull requests or manual starts. Provider discovery is manual only, with STOP as the default.
-- Run deterministic adapter self-tests in the hosted runner.
-- A separate explicit FREE confirmation plus a repository secret named `GROQ_API_KEY` permits exactly one documented model-availability GET.
-- No completion POST, automatic retry, redirect, fallback, package installation, scraping, messaging or customer input.
-- Logs contain only bounded public model metadata and sanitised status. The key remains in GitHub's encrypted secret store and is never a workflow input, source file, URL parameter, artifact or printed value.
-- A catalogue entry does not prove that a model is free for an account, suitable for a task or actually working.
+The owner explicitly requested cloud resources or other AI models. These workers used no local shell, filesystem, browser controller, model installation, PC CPU/GPU inference or external API account. Up to three workers may be active at once.
 
-## Owner-controlled connection
-The owner signs in or registers with Groq, reviews the account/model terms and confirms a Free account with no payment method or paid billing agreement. The owner creates a key and stores it directly in this repository's **Settings → Secrets and variables → Actions → New repository secret**, named `GROQ_API_KEY`. Never paste it into a chat.
+See [the exact initial results and corrections](native-worker-check.json).
+The initial scope score was 29/30; all five returned the exact synthetic Markdown and CSV strings. Three passed the complete initial check. One model returned an unauthorised ACCEPT decision; another omitted the proposed checks from its offer. Their initial failures are preserved, alongside follow-up corrections and restrictions.
 
-The owner also reviews GitHub Actions' applicable terms and enables the repository's workflows if required. The workflow must exist on the default branch before GitHub exposes its manual start control. A draft pull request may run synthetic adapter self-tests on GitHub's servers if Actions is enabled; it never receives a provider secret or sends provider requests.
+This is a small calibration, not proof of paid-task throughput, specialist ability or earnings. All five use the existing shared Codex allowance. They are not five independent providers, independent free quotas or new paid subscriptions. Root retains all scope decisions, account actions, commitments and outgoing messages.
 
-## Next stage
-After the actual availability response is reviewed, select five distinct supported text models and bind approval to an exact manifest and a fixed synthetic workload. A proposed later comparison is capped at ten completion requests: the same five calls in serial and then in parallel. That second stage is not authorised or implemented by the connection-only workflow.
+The inputs are invented; no customer CSV data, identifiers or reports are present.
 
-Per-model correctness, errors and total elapsed time must be reported. Root review and correction time is measured before any throughput benefit is claimed. Five models are not five independent providers or independent quota pools. No paid order, demand, revenue or guaranteed capacity is implied.
+## Optional external-provider adapter — parked
 
-GitHub Actions is used only to develop and test this adapter. It is not offered as a production hosting service or an always-on commercial worker platform.
+The separate Groq catalogue adapter and GitHub Actions workflow are a draft only. They are not required for the active native pool. No owner key setup is needed for that pool.
+
+The optional workflow has no push or schedule trigger. Discovery is manual, bound to this exact repository and branch, and requires FREE plus DISCOVER_ONLY and an owner-controlled GitHub secret. It permits one catalogue GET, zero completion POSTs, no redirect, retry or paid fallback. It cannot establish model task suitability or free account entitlement.
+
+No GitHub Actions run or external provider connection has been verified. The script must not be run on the owner's PC. A workflow present only on a feature branch may not expose GitHub's manual start control until it is approved onto the default branch.
+
+GitHub Actions is only a possible adapter-development/test facility, not an always-on commercial worker host.
 
 ## References
 - [GitHub Actions billing and usage](https://docs.github.com/en/actions/concepts/billing-and-usage)
 - [GitHub Actions additional terms](https://docs.github.com/en/site-policy/github-terms/github-terms-for-additional-products-and-features#actions)
 - [GitHub repository secrets](https://docs.github.com/en/actions/how-tos/write-workflows/choose-what-workflows-do/use-secrets)
-- [Groq API documentation](https://console.groq.com/docs/quickstart)
