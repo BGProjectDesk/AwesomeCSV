@@ -6,7 +6,7 @@ This isolated branch prepares a small software-adapter test on **standard GitHub
 No external model is connected or verified by this branch yet. No model generations are authorised by the first-stage workflow. The existing catalogue submission lives on a separate branch.
 
 ## First-stage contract
-- Manual start only, with STOP as the default.
+- Synthetic adapter self-tests run only on matching pull requests or manual starts. Provider discovery is manual only, with STOP as the default.
 - Run deterministic adapter self-tests in the hosted runner.
 - A separate explicit FREE confirmation plus a repository secret named `GROQ_API_KEY` permits exactly one documented model-availability GET.
 - No completion POST, automatic retry, redirect, fallback, package installation, scraping, messaging or customer input.
@@ -16,7 +16,7 @@ No external model is connected or verified by this branch yet. No model generati
 ## Owner-controlled connection
 The owner signs in or registers with Groq, reviews the account/model terms and confirms a Free account with no payment method or paid billing agreement. The owner creates a key and stores it directly in this repository's **Settings → Secrets and variables → Actions → New repository secret**, named `GROQ_API_KEY`. Never paste it into a chat.
 
-The owner also reviews GitHub Actions' applicable terms and enables the repository's workflows if required. The workflow must exist on the default branch before GitHub exposes its manual start control; publishing this draft branch does not enable or run it.
+The owner also reviews GitHub Actions' applicable terms and enables the repository's workflows if required. The workflow must exist on the default branch before GitHub exposes its manual start control. A draft pull request may run synthetic adapter self-tests on GitHub's servers if Actions is enabled; it never receives a provider secret or sends provider requests.
 
 ## Next stage
 After the actual availability response is reviewed, select five distinct supported text models and bind approval to an exact manifest and a fixed synthetic workload. A proposed later comparison is capped at ten completion requests: the same five calls in serial and then in parallel. That second stage is not authorised or implemented by the connection-only workflow.
