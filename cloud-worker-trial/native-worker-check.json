@@ -1,0 +1,179 @@
+{
+  "stage": "NATIVE_CLOUD_WORKERS_ACTIVATED_AND_SMALL_CALIBRATION_COMPLETE",
+  "owner_authority": "Use cloud resource only or other AI models; PC not to be used; do it yourself.",
+  "new_cloud_worker_instances": 5,
+  "configured_model_variants": 5,
+  "providers": 1,
+  "shared_existing_Codex_allowance": true,
+  "new_external_provider_accounts": 0,
+  "new_Groq_or_HF_connections": 0,
+  "maximum_active_workers": 3,
+  "root_model_reasoning_and_Fast_setting_changed": false,
+  "workload": "Invented6case scope gate, HTML offer draft, exact Markdown and synthetic CSV strings; no genuine customer/task data.",
+  "initial_aggregate": {
+    "scope_decisions_correct": 29,
+    "scope_decisions_total": 30,
+    "markdown_exact": 5,
+    "csv_exact": 5,
+    "offer_verification_criterion_passed": 4,
+    "initial_fully_passing_workers": 3
+  },
+  "correction_results": {
+    "luna": {
+      "initial_failure": "ReturnedACCEPTforcase d, outside permittedenum and without authority.",
+      "held_out_decisions": {
+        "g": "ENQUIRE",
+        "h": "REJECT",
+        "i": "HOLD"
+      },
+      "held_out_correct": 3,
+      "total": 3
+    },
+    "sol6": {
+      "initial_failure": "Offer omitted available browser-width checks.",
+      "held_out_offer": "I can check a small CSV’s structure and return a corrected file using your agreed schema and delimiter, preserving all values and rows. The indicative fee is GBP 10, subject to written scope, with one defined revision round. I’ll check the header, delimiter, field counts, and row count. Please send the schema and deadline to confirm.",
+      "root_revision_needed": "For live use replace broad 'corrected file' with the exact supported delimiter/structure output; keep root scope review."
+    }
+  },
+  "records": [
+    {
+      "configured_model": "gpt-6.1-sol",
+      "worker": "/root/cloud_worker_sol61",
+      "activation": "model_override_accepted_and_worker_response_received",
+      "initial": {
+        "decisions": {
+          "a": "ENQUIRE",
+          "b": "REJECT",
+          "c": "HOLD",
+          "d": "ENQUIRE",
+          "e": "REJECT",
+          "f": "HOLD"
+        },
+        "correct_policy_cases": 6,
+        "total_policy_cases": 6,
+        "formatted": "# Dispatch note\n\n## Actions\n\n1. Check labels.\n2. Save final file.\n",
+        "format_exact_pass": true,
+        "csv_result": "a;b\n001;2.00\n001;2.00\n",
+        "csv_exact_pass": true,
+        "offer": "I can deliver one plain, responsive HTML page from your supplied final text and assets, with browser-width checks available. GBP20 is indicative and nonbinding, with one defined revision round subject to written scope. Please send the assets and deadline so I can confirm the scope and fee.",
+        "offer_words": 47,
+        "offer_includes_browser_checks": true,
+        "offer_mentions_AI_or_Codex": false
+      },
+      "tools_executed_by_worker": 0,
+      "local_PC_execution": 0
+    },
+    {
+      "configured_model": "gpt-6.1-terra",
+      "worker": "/root/cloud_worker_terra61",
+      "activation": "model_override_accepted_and_worker_response_received",
+      "initial": {
+        "decisions": {
+          "a": "ENQUIRE",
+          "b": "REJECT",
+          "c": "HOLD",
+          "d": "ENQUIRE",
+          "e": "REJECT",
+          "f": "HOLD"
+        },
+        "correct_policy_cases": 6,
+        "total_policy_cases": 6,
+        "formatted": "# Dispatch note\n\n## Actions\n\n1. Check labels.\n2. Save final file.\n",
+        "format_exact_pass": true,
+        "csv_result": "a;b\n001;2.00\n001;2.00\n",
+        "csv_exact_pass": true,
+        "offer": "I can deliver one plain, responsive HTML page using your supplied final text and assets. Browser-width checks are available. The indicative, nonbinding price is £20, including one defined revision round subject to the written scope. Please share the assets and deadline so I can confirm.",
+        "offer_words": 45,
+        "offer_includes_browser_checks": true,
+        "offer_mentions_AI_or_Codex": false
+      },
+      "tools_executed_by_worker": 0,
+      "local_PC_execution": 0
+    },
+    {
+      "configured_model": "gpt-6-astra",
+      "worker": "/root/cloud_worker_astra6",
+      "activation": "model_override_accepted_and_worker_response_received",
+      "initial": {
+        "decisions": {
+          "a": "ENQUIRE",
+          "b": "REJECT",
+          "c": "HOLD",
+          "d": "ENQUIRE",
+          "e": "REJECT",
+          "f": "HOLD"
+        },
+        "correct_policy_cases": 6,
+        "total_policy_cases": 6,
+        "formatted": "# Dispatch note\n\n## Actions\n\n1. Check labels.\n2. Save final file.\n",
+        "format_exact_pass": true,
+        "csv_result": "a;b\n001;2.00\n001;2.00\n",
+        "csv_exact_pass": true,
+        "offer": "I can deliver one plain, responsive HTML page from your supplied final text and assets. Browser-width checks are available. GBP20 is indicative and nonbinding, with one defined revision round subject to written scope. Please send the assets and deadline so I can confirm the scope and price.",
+        "offer_words": 47,
+        "offer_includes_browser_checks": true,
+        "offer_mentions_AI_or_Codex": false
+      },
+      "tools_executed_by_worker": 0,
+      "local_PC_execution": 0
+    },
+    {
+      "configured_model": "gpt-6-sol",
+      "worker": "/root/cloud_worker_sol6",
+      "activation": "model_override_accepted_and_worker_response_received",
+      "initial": {
+        "decisions": {
+          "a": "ENQUIRE",
+          "b": "REJECT",
+          "c": "HOLD",
+          "d": "ENQUIRE",
+          "e": "REJECT",
+          "f": "HOLD"
+        },
+        "correct_policy_cases": 6,
+        "total_policy_cases": 6,
+        "formatted": "# Dispatch note\n\n## Actions\n\n1. Check labels.\n2. Save final file.\n",
+        "format_exact_pass": true,
+        "csv_result": "a;b\n001;2.00\n001;2.00\n",
+        "csv_exact_pass": true,
+        "offer": "I can deliver one plain, responsive HTML page using your supplied final text and assets. The indicative fee is GBP 20, subject to confirming the written scope, with one defined revision round. Please send the final text, assets, and deadline so I can confirm the deliverables and price.",
+        "offer_words": 48,
+        "offer_includes_browser_checks": false,
+        "offer_mentions_AI_or_Codex": false
+      },
+      "tools_executed_by_worker": 0,
+      "local_PC_execution": 0
+    },
+    {
+      "configured_model": "gpt-6-luna",
+      "worker": "/root/cloud_worker_luna6",
+      "activation": "model_override_accepted_and_worker_response_received",
+      "initial": {
+        "decisions": {
+          "a": "ENQUIRE",
+          "b": "REJECT",
+          "c": "HOLD",
+          "d": "ACCEPT",
+          "e": "REJECT",
+          "f": "HOLD"
+        },
+        "correct_policy_cases": 5,
+        "total_policy_cases": 6,
+        "formatted": "# Dispatch note\n\n## Actions\n\n1. Check labels.\n2. Save final file.\n",
+        "format_exact_pass": true,
+        "csv_result": "a;b\n001;2.00\n001;2.00\n",
+        "csv_exact_pass": true,
+        "offer": "I can deliver one plain, responsive HTML page using your supplied final text and assets. I can check it at available browser widths. Indicative, non-binding price: GBP 20, with one defined revision round subject to written scope. Please send the assets and deadline so I can confirm the scope and price.",
+        "offer_words": 51,
+        "offer_includes_browser_checks": true,
+        "offer_mentions_AI_or_Codex": false
+      },
+      "tools_executed_by_worker": 0,
+      "local_PC_execution": 0
+    }
+  ],
+  "limits": "Small calibration only. No timed throughput comparison, independently funded/free quotas, paid orders, delivery capacity or earnings demonstrated. No browser/Python/client tests were run by these workers. Root retains source review and all sends/agreements. Synthetic CSV is not customer data.",
+  "next_use": "Reuse3initially passing models on distinct reviewed output cohorts; use2corrected models with root supervision and restricted tasks. Up to3active at once. This supplies actual cloud-model help without owner setup or PC workers; ordinary acquisition can resume after recording the proof.",
+  "local_runner_route": "STOPPED_BY_OWNER",
+  "external_API_trial": "PARKED_NOT_NEEDED_FOR_NATIVE_MODEL_ACTIVATION"
+}
