@@ -81,5 +81,13 @@
     "root_only_sends": true,
     "pending_outgoing_send": null
   },
-  "historical_precision": "Current cloud addendum, not a complete migration of the frozen local115-contact/source history. Earlier completed reports/cutoffs unchanged, including16Nov19:13report26examined. Original2Novfunding milestone missed; USD100recovery0 and separateearnedreserve0."
+  "historical_precision": "Current cloud addendum, not a complete migration of the frozen local115-contact/source history. Earlier completed reports/cutoffs unchanged, including16Nov19:13report26examined. Original2Novfunding milestone missed; USD100recovery0 and separateearnedreserve0.",
+  "usage_end": {
+    "ordinary_usage_allowed": true,
+    "used_percent": 8,
+    "remaining_percent": 92,
+    "window_minutes": 10080
+  },
+  "commercial_gate_precision": "All parent cohorts and earlier rejected/unsent/unknown histories remain in the frozen local archive; this addendum does not reset them or assert their gates passed. This test revised channel to cloud-native issue comments and wording to whole-unit output/fee/checks without method boilerplate.",
+  "cloud_authoritative_scope": "Current-cycle addendum only; exact outbound receipt, metadata observations and inherited count delta are cloud-readable. Full older115-contact/source history has not been migrated; do not infer a clean history for unrelated sources."
 }
