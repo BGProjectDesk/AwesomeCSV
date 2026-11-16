@@ -18,13 +18,19 @@ This is a small calibration, not proof of paid-task throughput, specialist abili
 
 The inputs are invented; no customer CSV data, identifiers or reports are present.
 
-## Optional external-provider adapter — parked
+## Verified cloud code execution
+
+[Runtime proof](cloud-runtime-proof.json) confirms eight own-project Python adapter tests passed on GitHub-hosted Ubuntu. The latest verified run executed at 20:56 UTC and its logs were inspected at 22:14 UTC on 16 November. Provider discovery was skipped, and no completion or customer-data processing occurred.
+
+This establishes a cloud test facility for repository-associated software checks. Each buyer task still requires its own complete scope and regression checks. The [unsent Python-fix offer template](../commercial-operations/python-text-fix-offer-template-20261116.json) uses this actual proof.
+
+## Optional external-provider connection — parked
 
 The separate Groq catalogue adapter and GitHub Actions workflow are a draft only. They are not required for the active native pool. No owner key setup is needed for that pool.
 
 The optional workflow has no push or schedule trigger. Discovery is manual, bound to this exact repository and branch, and requires FREE plus DISCOVER_ONLY and an owner-controlled GitHub secret. It permits one catalogue GET, zero completion POSTs, no redirect, retry or paid fallback. It cannot establish model task suitability or free account entitlement.
 
-No GitHub Actions run or external provider connection has been verified. The script must not be run on the owner's PC. A workflow present only on a feature branch may not expose GitHub's manual start control until it is approved onto the default branch.
+GitHub Actions test execution is verified in the runtime proof above. No external provider connection is verified. The script must not be run on the owner's PC. A workflow present only on a feature branch may not expose GitHub's manual start control until it is approved onto the default branch.
 
 GitHub Actions is only a possible adapter-development/test facility, not an always-on commercial worker host.
 
