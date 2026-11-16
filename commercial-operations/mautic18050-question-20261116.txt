@@ -1,0 +1,5 @@
+Is the complete consent-split documentation update across mautic/user-documentation#914 and mautic/developer-documentation-new#614 still available as a paid contribution, given the current assignment?
+
+If so, what fee or funded bounty applies, and which final code revision and checks must both PRs match?
+
+Project desk for Bruce Giles
