@@ -4,7 +4,7 @@
   "source": "https://github.com/mautic/mautic/issues/18050",
   "cohort": "software_documentation_paid_availability",
   "sender": "BGProjectDesk — Project desk for Bruce Giles",
-  "status": "send_started",
+  "status": "sent_verified",
   "exact_text": "Is the complete consent-split documentation update across mautic/user-documentation#914 and mautic/developer-documentation-new#614 still available as a paid contribution, given the current assignment?\n\nIf so, what fee or funded bounty applies, and which final code revision and checks must both PRs match?\n\nProject desk for Bruce Giles",
   "message_sha256": "8d01741a465e49c5c880e45b688125570cb9f8f3cbf5f57f285772818b5b8238",
   "original_count_credit": 0,
@@ -31,6 +31,24 @@
       "at_utc": "2026-11-16T21:17:56Z",
       "sha256": "8d01741a465e49c5c880e45b688125570cb9f8f3cbf5f57f285772818b5b8238",
       "attempt": 1
+    },
+    {
+      "event": "sent_verified",
+      "at_utc": "2026-11-16T21:18:26Z",
+      "comment_id": 6929651771,
+      "sha256": "8d01741a465e49c5c880e45b688125570cb9f8f3cbf5f57f285772818b5b8238",
+      "proof": "https://github.com/mautic/mautic/issues/18050#issuecomment-6929651771"
     }
-  ]
+  ],
+  "pending_send_unknown": 0,
+  "verified_at_utc": "2026-11-16T21:18:26Z",
+  "proof": {
+    "comment_id": 6929651771,
+    "url": "https://github.com/mautic/mautic/issues/18050#issuecomment-6929651771",
+    "author": "BGProjectDesk",
+    "full_body_matches_saved_text": true,
+    "body_sha256": "8d01741a465e49c5c880e45b688125570cb9f8f3cbf5f57f285772818b5b8238",
+    "source_created_at_returned": null
+  },
+  "precision": "Posted and full matching public comment verified. This is an availability/fee/checks enquiry, not confirmed delivery, buyer reply, priced offer, assignment, paid order or proceeds."
 }
