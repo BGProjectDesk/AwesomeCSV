@@ -1,0 +1,36 @@
+{
+  "contact_id": "mautic-docs18050-paid-availability-20261116",
+  "cycle_id": "cloud-only-commercial-20261116T2105",
+  "source": "https://github.com/mautic/mautic/issues/18050",
+  "cohort": "software_documentation_paid_availability",
+  "sender": "BGProjectDesk — Project desk for Bruce Giles",
+  "status": "send_started",
+  "exact_text": "Is the complete consent-split documentation update across mautic/user-documentation#914 and mautic/developer-documentation-new#614 still available as a paid contribution, given the current assignment?\n\nIf so, what fee or funded bounty applies, and which final code revision and checks must both PRs match?\n\nProject desk for Bruce Giles",
+  "message_sha256": "8d01741a465e49c5c880e45b688125570cb9f8f3cbf5f57f285772818b5b8238",
+  "original_count_credit": 0,
+  "decision_precision": "One preliminary whole-unit fee/availability/checks question. No offer of untested implementation, claim/assignment, account, contract, free work or payment.",
+  "pre_send_reconciliation": {
+    "full_local_preflight_earlier_today_found_no_prior_contact": true,
+    "root_only_sends_since_preflight": 0,
+    "current_source_comments": 0,
+    "local_journal_baseline_events": 394,
+    "pending_send_unknown": 0,
+    "no_other_outgoing_send": true,
+    "Proton_Sent_needed": false
+  },
+  "source_rules": {
+    "programme_full_84_lines_read": true,
+    "developer_PR_requirements_full_658_lines_read": true,
+    "automated_AI_comment_prohibition_observed": false,
+    "account_and_payment_steps_not_assumed_complete": true
+  },
+  "control_revision": "Cloud Astra review identified internal overgate: fee/account readiness and assignee uncertainty did not alone prohibit a preliminary question. Whole implementation/verification/rights remain unresolved before any work.",
+  "events": [
+    {
+      "event": "send_started",
+      "at_utc": "2026-11-16T21:17:56Z",
+      "sha256": "8d01741a465e49c5c880e45b688125570cb9f8f3cbf5f57f285772818b5b8238",
+      "attempt": 1
+    }
+  ]
+}
