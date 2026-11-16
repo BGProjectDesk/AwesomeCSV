@@ -1,0 +1,114 @@
+{
+  "verified_at_utc": "2026-11-16T22:14:13Z",
+  "facility": "GitHub-hosted Linux Python software test runner",
+  "repository": "BGProjectDesk/AwesomeCSV",
+  "branch": "cloud-model-trial-20261116",
+  "latest_verified_run": {
+    "id": 43954916373,
+    "url": "https://github.com/BGProjectDesk/AwesomeCSV/actions/runs/43954916373",
+    "head_sha": "43a913009d632bcde2e82488144fd1d454fe63e1",
+    "event": "push",
+    "run_attempt": 1,
+    "executed_at_utc": "2026-11-16T20:56:25Z",
+    "completed_at_utc": "2026-11-16T20:56:31Z",
+    "conclusion": "success"
+  },
+  "all_returned_runs": [
+    {
+      "id": 43954916373,
+      "event": "push",
+      "sha": "43a913009d632bcde2e82488144fd1d454fe63e1",
+      "conclusion": "success",
+      "created_at": "2026-11-16T20:56:25Z"
+    },
+    {
+      "id": 43953574043,
+      "event": "push",
+      "sha": "3e3a5491becf4aad650b039e8759b9b51893dac1",
+      "conclusion": "success",
+      "created_at": "2026-11-16T20:48:29Z"
+    },
+    {
+      "id": 43953251141,
+      "event": "push",
+      "sha": "641f7dd23f812781171bf3b9bd9994c316eb95eb",
+      "conclusion": "success",
+      "created_at": "2026-11-16T20:46:35Z"
+    }
+  ],
+  "collection_coverage": {
+    "returned": 3,
+    "total": 3,
+    "assessed": 3
+  },
+  "jobs": [
+    {
+      "id": 133606795537,
+      "name": "adapter-tests",
+      "conclusion": "success",
+      "steps": [
+        {
+          "name": "Set up job",
+          "conclusion": "success"
+        },
+        {
+          "name": "Fetch this exact public project commit",
+          "conclusion": "success"
+        },
+        {
+          "name": "Cloud-only deterministic adapter tests (no provider secret or network)",
+          "conclusion": "success"
+        },
+        {
+          "name": "Complete job",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "id": 133606841356,
+      "name": "availability-only",
+      "conclusion": "skipped",
+      "steps": []
+    }
+  ],
+  "test_result": {
+    "passed": 8,
+    "failed": 0,
+    "reported_test_seconds": 0.002,
+    "test_names": [
+      "test_bad_catalogues (__main__.AdapterTests.test_bad_catalogues) ... ok",
+      "test_cloud_only (__main__.AdapterTests.test_cloud_only) ... ok",
+      "test_fake_transport_one_get (__main__.AdapterTests.test_fake_transport_one_get) ... ok",
+      "test_missing_key_has_no_transport_call (__main__.AdapterTests.test_missing_key_has_no_transport_call) ... ok",
+      "test_oversized_response (__main__.AdapterTests.test_oversized_response) ... ok",
+      "test_public_metadata_only (__main__.AdapterTests.test_public_metadata_only) ... ok",
+      "test_redirect_refused (__main__.AdapterTests.test_redirect_refused) ... ok",
+      "test_stop_before_secret_or_network (__main__.AdapterTests.test_stop_before_secret_or_network) ... ok"
+    ],
+    "summary_lines": [
+      "2026-11-16T20:56:28.9990156Z Ran 8 tests in 0.002s",
+      "2026-11-16T20:56:28.9990661Z OK"
+    ]
+  },
+  "verified_scope": "Existing own-project stdlib Python guard/catalogue adapter and its injected fake transports executed successfully on GitHub-hosted Ubuntu. Tests never called the provider; availability-only job was skipped.",
+  "limitations": [
+    "No external model connection, provider completion or customer task was executed.",
+    "No paid order, paid delivery, revenue or throughput multiplier demonstrated.",
+    "No browser, Mautic/PHP stack, DOCX renderer or shipped customer-CSV harness was validated by this run.",
+    "Use GitHub Actions for repository-associated software development/testing within its actual terms; no general commercial hosting or service resale."
+  ],
+  "controls": {
+    "local_PC_worker_execution": 0,
+    "new_installations_on_PC": 0,
+    "customer_rows_or_identifiers": 0,
+    "provider_secrets_used": 0,
+    "provider_live_requests": 0,
+    "root_model_or_cadence_changed": false
+  },
+  "historical_precision": "Execution happened20:46–20:56; this proof was first inspected22:14. Prior unverified-at-cutoff reports remain unchanged. Current workflow is manual-only and parked; no extra rerun was performed to obtain this proof.",
+  "primary_policy": [
+    "https://docs.github.com/en/actions/concepts/billing-and-usage",
+    "https://docs.github.com/en/site-policy/github-terms/github-terms-for-additional-products-and-features#actions"
+  ]
+}
