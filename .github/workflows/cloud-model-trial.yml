@@ -1,10 +1,5 @@
 name: Cloud model adapter test
 on:
-  push:
-    branches: [cloud-model-trial-20261116]
-    paths:
-      - 'cloud-worker-trial/**'
-      - '.github/workflows/cloud-model-trial.yml'
   workflow_dispatch:
     inputs:
       scope:
@@ -43,7 +38,7 @@ jobs:
         working-directory: project
         run: python3 cloud-worker-trial/discover.py self-test
   availability-only:
-    if: github.event_name == 'workflow_dispatch' && inputs.scope == 'DISCOVER_ONLY' && inputs.owner_free_confirmation == 'FREE' && github.run_attempt == 1
+    if: github.repository == 'BGProjectDesk/AwesomeCSV' && github.ref == 'refs/heads/cloud-model-trial-20261116' && github.event_name == 'workflow_dispatch' && inputs.scope == 'DISCOVER_ONLY' && inputs.owner_free_confirmation == 'FREE' && github.run_attempt == 1
     needs: adapter-tests
     runs-on: ubuntu-latest
     timeout-minutes: 5
