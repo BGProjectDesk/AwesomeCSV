@@ -1,0 +1,25 @@
+name: Owned HTML layout proof
+on:
+  push:
+    branches: [cloud-model-trial-20261116]
+    paths:
+      - cloud-worker-trial/html-fixture.html
+      - cloud-worker-trial/html_check.py
+      - .github/workflows/cloud-html-proof.yml
+permissions:
+  contents: read
+concurrency:
+  group: owned-html-layout-proof
+  cancel-in-progress: false
+jobs:
+  layout:
+    if: github.repository == 'BGProjectDesk/AwesomeCSV' && github.ref == 'refs/heads/cloud-model-trial-20261116' && github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          fetch-depth: 1
+      - name: Check own synthetic HTML in installed cloud Chrome
+        run: python3 -I cloud-worker-trial/html_check.py
