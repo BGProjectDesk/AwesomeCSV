@@ -1,0 +1,137 @@
+{
+  "scope": "Owned synthetic HTML fixture: measured layout and programmatic focus checks in hosted Chrome.",
+  "verified_at_utc": "2026-11-17T01:30:38Z",
+  "run": {
+    "id": 43995976063,
+    "job_id": 133748029579,
+    "url": "https://github.com/BGProjectDesk/AwesomeCSV/actions/runs/43995976063",
+    "source_sha": "971f42c06224792a0bfdadd1cbb1e68d494e9545",
+    "event": "push",
+    "run_attempt": 1,
+    "conclusion": "success",
+    "metrics_logged_at_utc": "2026-11-17T01:29:39Z"
+  },
+  "cases": [
+    {
+      "browserVersion": "157.0.8103.50",
+      "requestedWidth": 320,
+      "actualWidth": 320,
+      "scrollWidth": 320,
+      "main": {
+        "left": 16,
+        "right": 304,
+        "width": 288
+      },
+      "control": false,
+      "checks": {
+        "exactViewport": true,
+        "controlMatches": true,
+        "containerFits": true,
+        "programmaticFocus": true,
+        "zeroResourceEntries": true,
+        "overflowExpectation": true
+      },
+      "passed": true
+    },
+    {
+      "browserVersion": "157.0.8103.50",
+      "requestedWidth": 768,
+      "actualWidth": 768,
+      "scrollWidth": 768,
+      "main": {
+        "left": 24,
+        "right": 744,
+        "width": 720
+      },
+      "control": false,
+      "checks": {
+        "exactViewport": true,
+        "controlMatches": true,
+        "containerFits": true,
+        "programmaticFocus": true,
+        "zeroResourceEntries": true,
+        "overflowExpectation": true
+      },
+      "passed": true
+    },
+    {
+      "browserVersion": "157.0.8103.50",
+      "requestedWidth": 1280,
+      "actualWidth": 1280,
+      "scrollWidth": 1280,
+      "main": {
+        "left": 280,
+        "right": 1000,
+        "width": 720
+      },
+      "control": false,
+      "checks": {
+        "exactViewport": true,
+        "controlMatches": true,
+        "containerFits": true,
+        "programmaticFocus": true,
+        "zeroResourceEntries": true,
+        "overflowExpectation": true
+      },
+      "passed": true
+    },
+    {
+      "browserVersion": "157.0.8103.50",
+      "requestedWidth": 320,
+      "actualWidth": 320,
+      "scrollWidth": 2033,
+      "main": {
+        "left": 16,
+        "right": 304,
+        "width": 288
+      },
+      "control": true,
+      "checks": {
+        "exactViewport": true,
+        "controlMatches": true,
+        "containerFits": true,
+        "programmaticFocus": true,
+        "zeroResourceEntries": true,
+        "overflowExpectation": true
+      },
+      "passed": true
+    }
+  ],
+  "summary": {
+    "cases": 4,
+    "failed": 0,
+    "passed": true
+  },
+  "first_attempt": {
+    "run_id": 43995436992,
+    "source_sha": "9da25b256c08dcff087eb6cb164112248453b600",
+    "conclusion": "failure",
+    "reason": "Chrome's outer-window minimum yielded actual500px when320wasrequested. Exact-widthguard correctly failed2cases;768and1280passed. Preserved rather than relabelled.",
+    "correction": "Installed ChromeDriver uses documented CDP Emulation.setDeviceMetricsOverride before loading the same fixture; final measured innerWidth must equal request."
+  },
+  "sources": [
+    "html-fixture.html",
+    "html_check.py",
+    "../.github/workflows/cloud-html-proof.yml"
+  ],
+  "primary_method_refs": [
+    "https://developer.chrome.com/docs/automation-and-testing/headless-cli",
+    "https://chromedevtools.github.io/devtools-protocol/tot/Emulation/",
+    "https://github.com/SeleniumHQ/selenium/blob/trunk/dotnet/src/webdriver/Chrome/ChromeDriver.cs"
+  ],
+  "execution_boundary": {
+    "runner": "GitHub-hosted Linux",
+    "browser": "Installed Google Chrome157.0.8103.50 and installed matchingChromeDriver",
+    "dependencies": "Python standard library only; no browser or package downloads.",
+    "input": "Own self-contained synthetic HTML file, no external page URLs, accounts or customer material.",
+    "control_channel": "Ephemeral loopback-only ChromeDriver within hosted CI.",
+    "workflow": "Only exact feature branch and three proof source/workflow paths; no schedule or service. No rerun merely for another proof."
+  },
+  "limitations": [
+    "One synthetic page, not validation of any customer page.",
+    "No screenshot/visual inspection, keyboard navigation, accessibility audit, touch/mobile-device or Firefox/Safari coverage.",
+    "Focus is programmatic; narrow viewport widths are real CSS layout widths with mobile=false.",
+    "Resource entries were zero; background network-reduction flags/CSP are not a process network isolation proof.",
+    "No client delivery, accepted order, proceeds or capacity multiplier is established."
+  ]
+}
