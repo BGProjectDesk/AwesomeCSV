@@ -1,5 +1,13 @@
 # Awesome CSV [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
+> **BGProjectDesk fork — offline invoice/payment CSV review**
+>
+> Check two CSV exports using explicit column mappings and get local reports and review exceptions. Paid Python command-line source; tested on Windows/Python 3.12. Limit: 500 rows per input.
+>
+> [Product details and current price](https://payhip.com/b/ZqNJQ)
+>
+> The utility is published by Bruce Giles; the community catalogue follows below.
+
 **A carefully curated list of CSV-related tools and resources**
 
 [CSV](https://en.wikipedia.org/wiki/Comma-separated_values) remains the most futuristic data format from the distant past.
