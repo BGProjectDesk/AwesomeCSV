@@ -1,15 +1,14 @@
 {
-  "scope": "Owned synthetic HTML fixture: measured layout and programmatic focus checks in hosted Chrome.",
-  "verified_at_utc": "2026-11-17T01:30:38Z",
+  "scope": "Owned synthetic HTML fixture: measured layout checks and inspected 320x900 Chrome screenshot on hosted runner.",
+  "verified_at_utc": "2026-11-17T04:23:04Z",
   "run": {
-    "id": 43995976063,
-    "job_id": 133748029579,
-    "url": "https://github.com/BGProjectDesk/AwesomeCSV/actions/runs/43995976063",
-    "source_sha": "971f42c06224792a0bfdadd1cbb1e68d494e9545",
+    "id": 44016685618,
+    "job_id": 133816192552,
+    "url": "https://github.com/BGProjectDesk/AwesomeCSV/actions/runs/44016685618",
+    "source_sha": "15a3f0d4780b1fcaa512ff8c896c1cc38cc96296",
     "event": "push",
     "run_attempt": 1,
-    "conclusion": "success",
-    "metrics_logged_at_utc": "2026-11-17T01:29:39Z"
+    "conclusion": "success"
   },
   "cases": [
     {
@@ -30,6 +29,12 @@
         "programmaticFocus": true,
         "zeroResourceEntries": true,
         "overflowExpectation": true
+      },
+      "screenshot": {
+        "width": 320,
+        "height": 900,
+        "bytes": 24932,
+        "sha256": "0aa90e1495765ff12ff97de2154968b8058d046c5f071eb650ab5b0a73c4d426"
       },
       "passed": true
     },
@@ -52,6 +57,7 @@
         "zeroResourceEntries": true,
         "overflowExpectation": true
       },
+      "screenshot": null,
       "passed": true
     },
     {
@@ -73,6 +79,7 @@
         "zeroResourceEntries": true,
         "overflowExpectation": true
       },
+      "screenshot": null,
       "passed": true
     },
     {
@@ -94,6 +101,7 @@
         "zeroResourceEntries": true,
         "overflowExpectation": true
       },
+      "screenshot": null,
       "passed": true
     }
   ],
@@ -101,6 +109,29 @@
     "cases": 4,
     "failed": 0,
     "passed": true
+  },
+  "screenshot": {
+    "width": 320,
+    "height": 900,
+    "bytes": 24932,
+    "sha256": "0aa90e1495765ff12ff97de2154968b8058d046c5f071eb650ab5b0a73c4d426",
+    "transfer": "Exactly one complete base64 marker in native job logs; decoded signature, IHDR dimensions, size and SHA256 independently verified in conversation tool isolate; no PC file/download.",
+    "visual_review": {
+      "width": 320,
+      "height": 900,
+      "observed": "Heading and text wrap inside card; all two-column table content remains legible; card, table and button fit without clipping.",
+      "limit": "Programmatic focus passed but screenshot does not establish a distinct keyboard focus indicator or keyboard navigation."
+    }
+  },
+  "previous_layout_run": {
+    "id": 43995976063,
+    "job_id": 133748029579,
+    "url": "https://github.com/BGProjectDesk/AwesomeCSV/actions/runs/43995976063",
+    "source_sha": "971f42c06224792a0bfdadd1cbb1e68d494e9545",
+    "event": "push",
+    "run_attempt": 1,
+    "conclusion": "success",
+    "metrics_logged_at_utc": "2026-11-17T01:29:39Z"
   },
   "first_attempt": {
     "run_id": 43995436992,
@@ -117,7 +148,8 @@
   "primary_method_refs": [
     "https://developer.chrome.com/docs/automation-and-testing/headless-cli",
     "https://chromedevtools.github.io/devtools-protocol/tot/Emulation/",
-    "https://github.com/SeleniumHQ/selenium/blob/trunk/dotnet/src/webdriver/Chrome/ChromeDriver.cs"
+    "https://github.com/SeleniumHQ/selenium/blob/trunk/dotnet/src/webdriver/Chrome/ChromeDriver.cs",
+    "https://www.w3.org/TR/webdriver/#take-screenshot"
   ],
   "execution_boundary": {
     "runner": "GitHub-hosted Linux",
@@ -128,10 +160,11 @@
     "workflow": "Only exact feature branch and three proof source/workflow paths; no schedule or service. No rerun merely for another proof."
   },
   "limitations": [
-    "One synthetic page, not validation of any customer page.",
-    "No screenshot/visual inspection, keyboard navigation, accessibility audit, touch/mobile-device or Firefox/Safari coverage.",
-    "Focus is programmatic; narrow viewport widths are real CSS layout widths with mobile=false.",
-    "Resource entries were zero; background network-reduction flags/CSP are not a process network isolation proof.",
-    "No client delivery, accepted order, proceeds or capacity multiplier is established."
+    "Only one synthetic page; no customer page has been validated.",
+    "Visual inspection only at320x900 in Chrome;768/1280 have measured layout checks only.",
+    "No keyboard navigation, complete accessibility audit, touch/mobile-device or Firefox/Safari coverage.",
+    "Focus is programmatic and mobile=false; no distinct focus indicator claim.",
+    "Zero resource entries/background flags/CSP do not prove process network isolation.",
+    "No client delivery, accepted order, proceeds, demand or capacity multiplier is established."
   ]
 }
