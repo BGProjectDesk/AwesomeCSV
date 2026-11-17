@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline'">
+<title>Owned layout test fixture</title>
+<style>
+* { box-sizing: border-box; }
+body { margin: 0; padding: 16px; font: 16px/1.5 system-ui, sans-serif; }
+main { width: 100%; max-width: 720px; margin: auto; padding: 16px; border: 1px solid #777; border-radius: 8px; }
+h1 { margin-top: 0; font-size: 1.5rem; }
+table { width: 100%; border-collapse: collapse; table-layout: fixed; }
+th, td { border: 1px solid #777; padding: 8px; text-align: left; overflow-wrap: anywhere; }
+button { margin-top: 16px; padding: 8px 12px; font: inherit; }
+button:focus { outline: 3px solid #164baf; outline-offset: 2px; }
+#layout-proof { display: none; }
+</style>
+</head>
+<body>
+<main id="card">
+<h1>Sample documentation</h1>
+<p>This synthetic card checks a simple responsive layout.</p>
+<table>
+<caption>Example steps</caption>
+<thead><tr><th scope="col">Step</th><th scope="col">Description</th></tr></thead>
+<tbody><tr><td>Read</td><td>Check the sample labels.</td></tr><tr><td>Save</td><td>Save the final example.</td></tr></tbody>
+</table>
+<button id="action" type="button">Example action</button>
+</main>
+<pre id="layout-proof"></pre>
+<script>
+window.addEventListener('load', () => {
+  const control = new URLSearchParams(location.search).get('overflow') === '1';
+  if (control) {
+    const wide = document.createElement('div');
+    wide.style.width = '2000px';
+    wide.style.height = '1px';
+    document.querySelector('main').appendChild(wide);
+  }
+  const button = document.querySelector('button');
+  button.focus({ preventScroll: true });
+  const rect = document.querySelector('main').getBoundingClientRect();
+  document.querySelector('#layout-proof').textContent = JSON.stringify({
+    control, innerWidth: window.innerWidth,
+    scrollWidth: document.documentElement.scrollWidth,
+    main: { left: rect.left, right: rect.right, width: rect.width },
+    buttonFocused: document.activeElement === button,
+    externalResourceCount: performance.getEntriesByType('resource').length
+  });
+});
+</script>
+</body>
+</html>
