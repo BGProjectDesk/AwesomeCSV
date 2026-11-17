@@ -6,6 +6,8 @@
 >
 > [Product details and current price](https://payhip.com/b/ZqNJQ)
 >
+> If you’d like a quote for reviewing two exports, [contact the CSV Review Pilot](https://csv-review-pilot.tastyscarf1024.chatgpt.site). Describe the columns and the report you need. Keep the CSV files and their data out of the enquiry form.
+>
 > The utility is published by Bruce Giles; the community catalogue follows below.
 
 **A carefully curated list of CSV-related tools and resources**
