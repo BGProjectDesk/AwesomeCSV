@@ -1,4 +1,6 @@
 """Owned synthetic layout checks on the guarded GitHub-hosted runner only."""
+import base64
+import hashlib
 import json
 import math
 import os
@@ -6,6 +8,7 @@ from pathlib import Path
 import shutil
 import signal
 import socket
+import struct
 import subprocess
 import sys
 import tempfile
@@ -125,9 +128,26 @@ def case(driver, chrome, fixture, width, control):
                 "zeroResourceEntries": type(metrics["externalResourceCount"]) is int and metrics["externalResourceCount"] == 0,
                 "overflowExpectation": (metrics["scrollWidth"] > metrics["innerWidth"]) == control,
             }
+            screenshot = None
+            if width == 320 and not control:
+                require(all(checks.values()))
+                encoded = request("GET", prefix + "/screenshot")
+                require(isinstance(encoded, str) and 0 < len(encoded) <= 120000)
+                raw_png = base64.b64decode(encoded, validate=True)
+                require(33 <= len(raw_png) <= 90000)
+                require(raw_png[:8] == b"\x89PNG\r\n\x1a\n")
+                require(raw_png[8:16] == b"\x00\x00\x00\rIHDR")
+                png_width, png_height = struct.unpack(">II", raw_png[16:24])
+                require((png_width, png_height) == (320, 900))
+                digest = hashlib.sha256(raw_png).hexdigest()
+                screenshot = {"width": png_width, "height": png_height,
+                              "bytes": len(raw_png), "sha256": digest}
+                print("OWNED_SCREENSHOT_320_BEGIN:" + digest + ":" + encoded +
+                      ":OWNED_SCREENSHOT_320_END")
             return {"browserVersion": version, "requestedWidth": width,
                     "actualWidth": metrics["innerWidth"], "scrollWidth": metrics["scrollWidth"],
-                    "main": rect, "control": control, "checks": checks, "passed": all(checks.values())}
+                    "main": rect, "control": control, "checks": checks, "screenshot": screenshot,
+                    "passed": all(checks.values())}
         finally:
             if session is not None and isinstance(session, str) and session.isalnum():
                 try:
